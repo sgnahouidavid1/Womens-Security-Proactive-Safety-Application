@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Womens-Security-with-Sms-alerts</string>
+    <string name="let_s_start">Let\'s Start</string>
+    <string name="personal_app">Personal app</string>
+    <string name="proactive_safety">Proactive Safety</string>
+    <string name="sign_up_now">Sign Up Now</string>
+    <string name="email">Email Address:</string>
+    <string name="password">Password:</string>
+    <string name="create">Create a account </string>
+    <string name="re_type_email_address">Re-Type Email Address</string>
+    <string name="already_have_an_account_click_the_login_button_to_login_to_the_app">Already have an account ? Click the login button to login to the App.</string>
+    <string name="login_to_already_existing_account">Login to already existing account</string>
+    <string name="login">Login into your account</string>
+    <string name="login_now">Login Now</string>
+</resources>

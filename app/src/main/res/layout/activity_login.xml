@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/background_bg"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:gravity="center"
+        android:textSize="45sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="410dp"
+            android:layout_height="75dp"
+            android:id="@+id/tfLoginEmail"
+            android:textColor="@color/white"
+            android:hint="@string/email"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="410dp"
+            android:layout_height="75dp"
+            android:id="@+id/tfLoginPassword"
+            android:textColor="@color/white"
+            android:hint="@string/password"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_now"
+        android:background="@drawable/background_bg"
+        android:fontFamily="sans-serif"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"/>
+</LinearLayout>
