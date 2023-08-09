@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_bg"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
     tools:context=".MainActivity">
 
     <!-- Front page -->
@@ -12,15 +14,12 @@
         android:id="@+id/ivImage"
         android:layout_width="100dp"
         android:layout_height="150dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="230dp"
         android:src="@drawable/front_page_img" />
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginTop="230dp"
         android:layout_toEndOf="@id/ivImage"
         android:background="@drawable/background_bg"
@@ -35,8 +34,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tvTitle"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_toEndOf="@id/ivImage"
         android:background="@drawable/background_bg"
         android:fontFamily="sans-serif"
@@ -47,7 +44,7 @@
 
     <Button
         android:id="@+id/btLetStart"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:text="@string/let_s_start"
@@ -57,7 +54,6 @@
         android:textStyle="bold"
         android:layout_below="@id/ivImage"
         android:layout_marginTop="75dp"
-        android:layout_marginStart="85dp"
         android:fontFamily="sans-serif"/>
 
 </RelativeLayout>

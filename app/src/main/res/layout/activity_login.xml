@@ -1,44 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
     android:background="@drawable/background_bg"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     tools:context=".LoginActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvLoginTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:text="@string/login_here"
         android:gravity="center"
         android:textSize="45sp"
         android:fontFamily="sans-serif"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="30dp"/>
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfLoginMobile"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLoginTitle">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="410dp"
             android:layout_height="75dp"
-            android:id="@+id/tfLoginEmail"
+            android:inputType="phone"
             android:textColor="@color/white"
-            android:hint="@string/email"
+            android:hint="@string/mobile_number"
             android:fontFamily="sans-serif"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfLoginPassword"
+        android:layout_below="@id/tfLoginMobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="410dp"
             android:layout_height="75dp"
-            android:id="@+id/tfLoginPassword"
             android:textColor="@color/white"
+            android:inputType="textPassword"
             android:hint="@string/password"
             android:fontFamily="sans-serif"
             android:textSize="20sp" />
@@ -46,14 +52,40 @@
 
     <Button
         android:id="@+id/btLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login_now"
+        android:text="@string/login_button"
         android:background="@drawable/background_bg"
         android:fontFamily="sans-serif"
         android:textSize="30sp"
+        android:layout_below="@+id/tfLoginPassword"
         android:textStyle="bold"
-        android:padding="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:textColor="@color/white"
         android:layout_marginTop="50dp"/>
-</LinearLayout>
+    <TextView
+        android:id="@+id/tvLoginButtonInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/btLogin"
+        android:text="@string/don_t_have_an_account"
+        android:layout_marginTop="40dp"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvRegisterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btLogin"
+        android:layout_toEndOf="@+id/tvLoginButtonInfo"
+        android:text="@string/register_now_loginPage"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/neonPink"
+        android:textStyle="bold"/>
+</RelativeLayout>

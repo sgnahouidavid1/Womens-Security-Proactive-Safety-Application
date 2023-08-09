@@ -1,31 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@drawable/background_bg"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     tools:context=".SignUpActivity">
     <TextView
+        android:id="@+id/tvSignUpTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sign_up_now"
+        android:text="@string/register_now"
         android:gravity="center"
         android:textSize="45sp"
         android:fontFamily="sans-serif"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="30dp" />
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSignUpTitle"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tfFullName">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tfEmail"
             android:layout_width="410dp"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:hint="@string/full_name"
+            android:textColorHighlight="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/tfFullName"
+        android:id="@+id/tfMobileNum">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="410dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:inputType="phone"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:hint="@string/mobile_number"
+            android:textColorHighlight="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/tfMobileNum"
+        android:id="@+id/tfEmail">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="410dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
             android:textSize="20sp"
             android:textColor="@color/white"
             android:hint="@string/email"
@@ -34,63 +73,76 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/tfEmail"
+        android:id="@+id/tfPassword">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tfEmailTwo"
             android:layout_width="410dp"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:hint="@string/email"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:hint="@string/password"
             android:textSize="20sp"
             android:textColor="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tfPassword"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tfPasswordTwo">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tfPassword"
             android:layout_width="410dp"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
+            android:inputType="textPassword"
+            android:maxLines="1"
             android:textSize="20sp"
             android:textColor="@color/white"
-            android:hint="@string/password" />
+            android:hint="@string/re_type_password" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_bg"
-        android:text="@string/create"
-        android:fontFamily="sans-serif"
-        android:padding="20dp"
-        android:textSize="25sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="50dp"/>
-    <TextView
-        android:id="@+id/tvLoginInfo"
+        android:id="@+id/btRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/already_have_an_account_click_the_login_button_to_login_to_the_app"
-        android:layout_marginTop="40dp"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"/>
-    <Button
-        android:id="@+id/btLogin"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_below="@+id/tfPasswordTwo"
         android:background="@drawable/background_bg"
-        android:text="@string/login_to_already_existing_account"
+        android:text="@string/register"
         android:fontFamily="sans-serif"
         android:padding="10dp"
         android:textSize="25sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="50dp"/>
+    <TextView
+        android:id="@+id/tvRegisterButtonInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/btRegister"
+        android:text="@string/already_have_an_account_click_the_login_button_to_login_to_the_app"
+        android:layout_marginTop="40dp"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvLoginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btRegister"
+        android:layout_toEndOf="@+id/tvRegisterButtonInfo"
+        android:text="@string/login_to_already_existing_account"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/neonPink"
+        android:textStyle="bold"/>
 
-</LinearLayout>
+
+
+</RelativeLayout>
