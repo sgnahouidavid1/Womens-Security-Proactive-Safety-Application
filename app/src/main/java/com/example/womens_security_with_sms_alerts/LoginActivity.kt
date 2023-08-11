@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
         btLogin.setOnClickListener {
             if(tfLoginMobile?.text.toString().isEmpty() || tfLoginPassword?.text.toString().isEmpty()){
                 Toast.makeText(this,
-                    "Password or Phone Number has not been Entered", Toast.LENGTH_SHORT).show()
+                    "Password or Phone number has not been Entered", Toast.LENGTH_SHORT).show()
             }
         }
     }

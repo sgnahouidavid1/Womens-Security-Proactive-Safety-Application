@@ -26,6 +26,7 @@
         android:layout_marginBottom="10dp"
         android:id="@+id/tfFullName">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfFirstLastName"
             android:layout_width="410dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
@@ -43,6 +44,7 @@
         android:layout_below="@+id/tfFullName"
         android:id="@+id/tfMobileNum">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfPhoneNumber"
             android:layout_width="410dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
@@ -60,6 +62,7 @@
         android:layout_below="@+id/tfMobileNum"
         android:id="@+id/tfEmail">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfEmailAddress"
             android:layout_width="410dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
@@ -78,6 +81,7 @@
         android:layout_below="@+id/tfEmail"
         android:id="@+id/tfPassword">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfAccountPassword"
             android:layout_width="410dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
@@ -95,6 +99,7 @@
         android:layout_marginBottom="10dp"
         android:id="@+id/tfPasswordTwo">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfAccountPasswordTwo"
             android:layout_width="410dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
