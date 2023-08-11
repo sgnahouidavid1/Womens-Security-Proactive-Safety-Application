@@ -30,9 +30,9 @@
             android:id="@+id/tfMobile"
             android:layout_width="410dp"
             android:layout_height="75dp"
-            android:inputType="phone"
+            android:inputType="textEmailAddress"
             android:textColor="@color/white"
-            android:hint="@string/mobile_number"
+            android:hint="@string/mobile_number_or_email_address"
             android:fontFamily="sans-serif"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>

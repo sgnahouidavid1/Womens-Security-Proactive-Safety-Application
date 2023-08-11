@@ -7,7 +7,7 @@
     android:background="@drawable/background_bg"
     android:paddingRight="10dp"
     android:paddingLeft="10dp"
-    tools:context=".MainActivity">
+    tools:context=".FrontPageActivity">
 
     <!-- Front page -->
     <ImageView
