@@ -35,23 +35,20 @@ class SignUpActivity : AppCompatActivity() {
     }
     private  fun performRegistration(){
         var tfFullName: TextInputEditText? = null
-        var tfMobileNum:  TextInputEditText? = null
         var tfEmail: TextInputEditText? = null
         var tfPassword: TextInputEditText? = null
         var tfPasswordTwo: TextInputEditText? = null
 
         tfFullName = findViewById(R.id.tfFirstLastName)
-        tfMobileNum = findViewById(R.id.tfPhoneNumber)
         tfEmail = findViewById(R.id.tfEmailAddress)
         tfPassword = findViewById(R.id.tfAccountPassword)
         tfPasswordTwo = findViewById(R.id.tfAccountPasswordTwo)
 
         val fullName = tfFullName?.text.toString()
-        val mobileNum = tfMobileNum?.text.toString()
         val email = tfEmail?.text.toString()
         val password = tfPassword?.text.toString()
         val passwordTwo = tfPasswordTwo?.text.toString()
-        if(email.isEmpty() || password.isEmpty() || fullName.isEmpty() || mobileNum.isEmpty() || passwordTwo.isEmpty()){
+        if(email.isEmpty() || password.isEmpty() || fullName.isEmpty() || passwordTwo.isEmpty()){
             Toast.makeText(this,
                 "One or more of the registering fields has not been enter", Toast.LENGTH_SHORT).show()
             return

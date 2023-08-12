@@ -37,29 +37,12 @@
             android:hint="@string/full_name"
             android:textColorHighlight="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_below="@+id/tfFullName"
-        android:id="@+id/tfMobileNum">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tfPhoneNumber"
-            android:layout_width="410dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:maxLines="1"
-            android:inputType="phone"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:hint="@string/mobile_number"
-            android:textColorHighlight="@color/white"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/tfMobileNum"
         android:id="@+id/tfEmail">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tfEmailAddress"

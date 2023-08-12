@@ -31,19 +31,19 @@ class LoginActivity : AppCompatActivity() {
         }
     }
     private fun performLogin() {
-        var tfLoginMobile_EmailAddress: TextInputEditText? = null
+        var tfEmailAddress: TextInputEditText? = null
         var tfLoginPassword: TextInputEditText? = null
-        tfLoginMobile_EmailAddress = findViewById(R.id.tfMobile)
+        tfEmailAddress = findViewById(R.id.tfEmailAddress)
         tfLoginPassword = findViewById(R.id.tfPassword)
 
-        val mobileLoginOrEmailAddress = tfLoginMobile_EmailAddress?.text.toString()
+        val emailAddress = tfEmailAddress?.text.toString()
         val passwordLogin = tfLoginPassword?.text.toString()
-        if(mobileLoginOrEmailAddress.isEmpty() || passwordLogin.isEmpty()){
+        if(emailAddress.isEmpty() || passwordLogin.isEmpty()){
             Toast.makeText(this,
                 "One or both of the login fields has not been enter", Toast.LENGTH_SHORT).show()
             return
         }
-        auth.signInWithEmailAndPassword(mobileLoginOrEmailAddress, passwordLogin)
+        auth.signInWithEmailAndPassword(emailAddress, passwordLogin)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, navigate to main activity of the application

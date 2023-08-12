@@ -7,30 +7,50 @@
     android:background="@drawable/background_bg"
     tools:context=".MainApplicationActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to the application!"
-        android:textSize="40sp"
-        android:textColor="@color/white"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
-
-    <Button
-        android:id="@+id/btLogOut"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="5dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_image"
+            android:contentDescription="@string/a_image_for_the_application"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/women_s_proactive_safety"
+            android:textSize="40sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tfVerification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_bg"
-        android:text="@string/logout"
+        android:text="@string/enter_phone_number_for_verification"
+        android:gravity="center"
+        android:textSize="30sp"
         android:fontFamily="sans-serif"
-        android:padding="10dp"
-        android:textSize="25sp"
-        android:textColor="@color/white"
         android:textStyle="bold"
-        android:layout_marginTop="50dp"/>
-    </LinearLayout>
+        android:textColor="@color/white"
+        android:layout_marginTop="125dp"
+        android:layout_marginBottom="30dp"/>
+    <TextView
+        android:id="@+id/tfSMSAccessCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tfVerification"
+        android:text="@string/this_number_will_be_used_for_all_app_related_communication_you_will_receive_an_sms_with_an_access_code_for_verification"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
 </RelativeLayout>

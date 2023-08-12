@@ -22,23 +22,23 @@
         android:layout_marginTop="150dp"
         android:layout_marginBottom="30dp"/>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tfLoginMobile"
+        android:id="@+id/tfLoginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvLoginTitle">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tfMobile"
+            android:id="@+id/tfEmailAddress"
             android:layout_width="410dp"
             android:layout_height="75dp"
             android:inputType="textEmailAddress"
             android:textColor="@color/white"
-            android:hint="@string/mobile_number_or_email_address"
+            android:hint="@string/email"
             android:fontFamily="sans-serif"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tfLoginPassword"
-        android:layout_below="@id/tfLoginMobile"
+        android:layout_below="@id/tfLoginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
