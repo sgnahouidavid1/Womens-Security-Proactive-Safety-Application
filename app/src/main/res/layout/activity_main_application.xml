@@ -7,50 +7,83 @@
     android:background="@drawable/background_bg"
     tools:context=".MainApplicationActivity">
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:paddingStart="5dp"
-        android:paddingEnd="5dp"
-        android:paddingTop="5dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/logo_image"
-            android:contentDescription="@string/a_image_for_the_application"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/women_s_proactive_safety"
-            android:textSize="40sp"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/white"/>
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivSecondImage"
+        android:layout_width="wrap_content"
+        android:layout_height="345dp"
+        android:src="@drawable/phone_auth_image"
+        android:contentDescription="image for the phone authentication "/>
     <TextView
-        android:id="@+id/tfVerification"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/enter_phone_number_for_verification"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:fontFamily="sans-serif"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:layout_marginTop="125dp"
-        android:layout_marginBottom="30dp"/>
-    <TextView
-        android:id="@+id/tfSMSAccessCode"
+        android:id="@+id/tvEnterPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tfVerification"
-        android:text="@string/this_number_will_be_used_for_all_app_related_communication_you_will_receive_an_sms_with_an_access_code_for_verification"
-        android:layout_marginTop="5dp"
-        android:textSize="20sp"
-        android:layout_marginStart="5dp"
+        android:text="Input Phone Number:"
+        android:layout_below="@+id/ivSecondImage"
+        android:layout_marginTop="130dp"
         android:textColor="@color/white"
+        android:layout_marginStart="10dp"
+        android:textSize="25sp"
         android:textStyle="bold"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfAreaNumber"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/tvEnterPhone"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfNumber"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:hint="+1"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:background="@drawable/background_bg"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfPhoneNumber"
+        android:layout_width="310dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/tvEnterPhone"
+        android:layout_toEndOf="@+id/tfAreaNumber"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfPhone"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:hint=" Type Phone Number:"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:background="@drawable/background_bg"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btSendOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tfPhoneNumber"
+        android:background="@drawable/background_bg"
+        android:text="Send OTP"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"/>
+
+
 
 </RelativeLayout>

@@ -65,10 +65,10 @@ class SignUpActivity : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                     // If sign in is success, display a message to the user.
-                    Toast.makeText(baseContext, "Authentication successful.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, "Email and Password Authentication successful.", Toast.LENGTH_SHORT).show()
                 } else {
                     // If sign in fails, display a message to the user.
-                    Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, "Email and Phone Authentication failed.", Toast.LENGTH_SHORT).show()
                 }
             }
             .addOnFailureListener {

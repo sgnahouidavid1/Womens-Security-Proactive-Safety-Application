@@ -11,18 +11,17 @@
 
     <!-- Front page -->
     <ImageView
-        android:id="@+id/ivImage"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="230dp"
-        android:src="@drawable/front_page_image"
-        android:contentDescription="@string/a_image_for_the_application"/>
+        android:id="@+id/ivFirstImage"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:src="@drawable/first_page_image"/>
+
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="230dp"
-        android:layout_toEndOf="@id/ivImage"
+        android:layout_below="@+id/ivFirstImage"
+        android:layout_marginTop="20dp"
         android:background="@drawable/background_bg"
         android:text="@string/proactive_safety"
         android:textColor="@color/white"
@@ -35,7 +34,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tvTitle"
         android:layout_marginTop="10dp"
-        android:layout_toEndOf="@id/ivImage"
         android:background="@drawable/background_bg"
         android:fontFamily="sans-serif"
         android:text="@string/personal_app"
@@ -53,7 +51,7 @@
         android:textSize="35sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:layout_below="@id/ivImage"
+        android:layout_below="@+id/tv2Title"
         android:layout_marginTop="75dp"
         android:fontFamily="sans-serif"/>
 
